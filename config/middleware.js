@@ -1,4 +1,4 @@
-console.log("flash middleware loaded");
+
 
 //This middleware is responsible for setting flash messages in the response locals object,
 // making them available to the views.

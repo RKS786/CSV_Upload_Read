@@ -5,13 +5,6 @@ const port = 9999;
 // Import the Mongoose connection object from the mongoose.js file in the config directory
 const db = require('./config/mongoose');
 
-// Used for session cookie
-const session = require('express-session');
-
-
-const flash = require('connect-flash');
-const customMware = require('./config/middleware');
-
 // Middleware to parse incoming form data with 'urlencoded' payloads
 // This enables handling of form submissions and populates 'req.body' with the parsed data.
 app.use(express.urlencoded());
@@ -34,21 +27,6 @@ app.set('view engine', 'ejs');
 
 // Set the directory where views are located
 app.set('views', './views');
-
-const sessionMiddleware = session({
-    name: 'CSVUPLOAD',
-    secret: 'CodingNinja',
-    saveUninitialized: false, // don't create session until something stored
-    resave: false, //don't save session if unmodified
-    cookie: {
-        maxAge: 1000 * 60 * 100,
-    }
-});
-
-app.use(sessionMiddleware);
-
-app.use(flash());
-app.use(customMware.setFlash);
 
 
 // Use express router defined in the 'routes' module

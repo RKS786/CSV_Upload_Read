@@ -4,6 +4,7 @@
   "description": "Upload a CSV and show the data in it",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ranik",
