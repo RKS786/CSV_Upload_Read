@@ -6,10 +6,10 @@ const csvParser     = require('csv-parser');
 module.exports.view = async ( req, res) => {
     try {
         let viewFile = await csvFileDB.findById(req.params.id);
-        // console.log('viewFile ',viewFile);
 
         const header = [];
         const result = [];
+        
 
         fs.createReadStream(viewFile.FilePath)
         .pipe(csvParser())

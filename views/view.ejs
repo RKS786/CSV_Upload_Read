@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/view.css">
 
 
-<center class="view-container">
+<div class="view-container">
     <h1 id="file-name"> <%= FileName%> </h1>
 
     <!-- Search Section -->
@@ -17,7 +17,7 @@
 
     <!-- Result Section -->
     <div class="result-container">
-        <table>
+        <table id="data-table">
             <thead>
                 <tr>
                     <% for(let i of head) { %>
@@ -37,4 +37,5 @@
         </table>
     </div>
 
-</center>
+</div>
+<script src="/js/viewSearch.js"></script>

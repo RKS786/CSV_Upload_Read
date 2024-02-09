@@ -1,4 +1,4 @@
-const csvFile = require('../models/csv_db')
+const csvFile = require('../models/csv_db');
 const fs = require('fs');
 const path = require('path');
 
