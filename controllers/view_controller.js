@@ -31,7 +31,7 @@ module.exports.view = async (req, res) => {
                 const slicedData = result.slice(startIndex, endIndex);
 
                 // Render the 'View' template with the retrieved data and pagination information
-                res.render('View', {
+                res.render('view', {
                     title: 'File View',
                     FileName: viewFile.FileName,
                     head: header, // Pass the CSV headers to the template
